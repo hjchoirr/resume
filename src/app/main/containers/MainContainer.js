@@ -10,11 +10,20 @@ const StyledNav = styled.nav`
   line-height: 50px;
   border-bottom: 1px solid #000;
   .menu {
+    max-width: 1100px;
+    margin: 0 auto;
+    
     a {
       font-size: 1.75rem;
       padding: 0 30px;
     }
+
   }
+`;
+
+const StyledSections = styled.div`
+    max-width: 1200px;
+    margin: 0 auto;
 `;
 const options = {
   anchors: ['sectionOne', 'sectionTwo', 'sectionThree'],
@@ -32,11 +41,12 @@ const MainContainer = () => {
         </div>
       </StyledNav>
     </Header>
-    <ScrollToTopOnMount />
     <SectionsContainer {...options}>
-      <Section><InfoAbout/></Section>
-      <Section><Experience/></Section>
-      <Section><PortPolio/></Section>
+      <StyledSections>
+        <Section><InfoAbout/></Section>
+        <Section><Experience/></Section>
+        <Section><PortPolio/></Section>
+      </StyledSections>
     </SectionsContainer>
     </>
   );
